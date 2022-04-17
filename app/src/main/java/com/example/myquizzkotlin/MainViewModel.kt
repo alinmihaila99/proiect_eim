@@ -19,7 +19,7 @@ class MainViewModel(private val repository: Repository): ViewModel() {
     }
     fun register(userCredentials: UserCredentials){
         viewModelScope.launch {
-            val response = repository.login(userCredentials)
+            val response = repository.register(userCredentials)
             myResponse.value = response
         }
     }

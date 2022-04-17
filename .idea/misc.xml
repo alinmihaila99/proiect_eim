@@ -5,6 +5,10 @@
       <map>
         <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/activity_login2.xml" value="0.25" />
         <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/fragment_dashboard.xml" value="0.2864583333333333" />
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/fragment_home.xml" value="0.2864583333333333" />
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/fragment_notifications.xml" value="0.1634963768115942" />
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2864583333333333" />
       </map>
     </option>
   </component>

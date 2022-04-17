@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.myquizzkotlin.model.UserCredentials
 import com.example.myquizzkotlin.repository.Repository
 
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MainViewModel
@@ -28,8 +29,9 @@ class LoginActivity : AppCompatActivity() {
         val registerDataEmail: TextView = findViewById(R.id.editTextTextEmailAddress2);
         val registerDataPassword: TextView = findViewById(R.id.editTextTextPassword);
 
+
         button.setOnClickListener {
-            if (!switchLoginRegister.isChecked) {
+            if (switchLoginRegister.isChecked) {
                 viewModel.login(UserCredentials(registerDataEmail.text.toString(), registerDataPassword.text.toString()));
             } else {
                 viewModel.register(UserCredentials(registerDataEmail.text.toString(), registerDataPassword.text.toString()));
@@ -39,7 +41,9 @@ class LoginActivity : AppCompatActivity() {
         viewModel.myResponse.observe(this, Observer {
             response ->
             run {
-                startActivity(Intent(this, MainActivity::class.java))
+                println(response)
+                if(response.id > 0)
+                    startActivity(Intent(this, MainActivity::class.java))
             }
         })
         switchLoginRegister.setOnCheckedChangeListener{

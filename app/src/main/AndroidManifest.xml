@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myquizzkotlin">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyQuizzKotlin"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".LeaderBoard"
+            android:exported="false"
+            android:label="@string/title_activity_leader_board"
+            android:theme="@style/Theme.MyQuizzKotlin.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -22,10 +29,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name">
-
-        </activity>
+            android:label="@string/app_name"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
