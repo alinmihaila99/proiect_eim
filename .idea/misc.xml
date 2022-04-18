@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/activity_already_completed_daily_goal.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/activity_daily_goal.xml" value="0.3482789855072464" />
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/activity_leader_board.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/activity_login2.xml" value="0.25" />
         <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/content_already_completed_daily_goal.xml" value="0.3482789855072464" />
         <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/fragment_dashboard.xml" value="0.2864583333333333" />
         <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/fragment_home.xml" value="0.2864583333333333" />
         <entry key="..\:/Users/Alin/AndroidStudioProjects/MyQuizzKotlin/app/src/main/res/layout/fragment_notifications.xml" value="0.1634963768115942" />

@@ -3,13 +3,14 @@ package com.example.myquizzkotlin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.myquizzkotlin.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +39,18 @@ class MainActivity : AppCompatActivity() {
         seeDailyGoalButton.setOnClickListener { println("Am apasat Daily Goal") }
         seeLeaderbordButton.setOnClickListener { val intent = Intent(this, LeaderBoard::class.java)
             startActivity(intent) }
+        val settings = applicationContext.getSharedPreferences("dailyGoal", 0)
+        val dailyGoal = settings.getInt("dailyGoal", 0)
+        println("Daily goal is: ")
+        println(dailyGoal);
+        if(dailyGoal == 1){
+            seeDailyGoalButton.setOnClickListener {  val intent = Intent(this, AlreadyCompletedDailyGoal::class.java)
+                startActivity(intent) }
+        }
+        else{
+            seeDailyGoalButton.setOnClickListener {  val intent = Intent(this, DailyGoal::class.java)
+                startActivity(intent) }
+        }
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }

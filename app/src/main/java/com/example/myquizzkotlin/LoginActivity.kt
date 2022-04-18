@@ -1,11 +1,11 @@
 package com.example.myquizzkotlin
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Switch
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.myquizzkotlin.model.UserCredentials
@@ -44,6 +44,10 @@ class LoginActivity : AppCompatActivity() {
                 println(response)
                 if(response.id > 0)
                     startActivity(Intent(this, MainActivity::class.java))
+                val settings = applicationContext.getSharedPreferences("dailyGoal", 0)
+                val editor = settings.edit()
+                editor.putInt("dailyGoal", response.dailyGoal)
+                editor.apply()
             }
         })
         switchLoginRegister.setOnCheckedChangeListener{
