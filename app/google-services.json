@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "855187727201",
+    "project_id": "eimkotlin",
+    "storage_bucket": "eimkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855187727201:android:b5a2f376afed7ceaea5b20",
+        "android_client_info": {
+          "package_name": "com.example.myquizzkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855187727201-h7vrdsqba044lqegek9on4ic9lrpuhr9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAJDVplcIXQ0jbJm20o_joq01NjbvCAuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855187727201-h7vrdsqba044lqegek9on4ic9lrpuhr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
