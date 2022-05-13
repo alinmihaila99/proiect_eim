@@ -1,3 +1,5 @@
 package com.example.myquizzkotlin.model
 
-data class UserId()
+data class UserId(
+    val userId: Int
+)
