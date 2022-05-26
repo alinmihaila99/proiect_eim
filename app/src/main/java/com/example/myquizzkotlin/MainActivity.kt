@@ -1,6 +1,9 @@
 package com.example.myquizzkotlin
 
+import android.content.BroadcastReceiver
 import android.content.Intent
+import android.content.IntentFilter
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -22,35 +25,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
-        val startQuizzButton: Button = findViewById(R.id.button2);
-        val seeDailyGoalButton: Button = findViewById(R.id.button3);
-        val seeLeaderbordButton: Button = findViewById(R.id.button4);
+        val br: BroadcastReceiver = com.example.myquizzkotlin.BroadcastReceiver()
+        val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION).apply {
+            addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        }
+        registerReceiver(br, filter)
 
+        val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
             )
         )
-        startQuizzButton.setOnClickListener { println("Am apasat Start Quizz!!!")}
-        seeDailyGoalButton.setOnClickListener { println("Am apasat Daily Goal") }
-        seeLeaderbordButton.setOnClickListener { val intent = Intent(this, LeaderBoard::class.java)
-            startActivity(intent) }
-        val settings = applicationContext.getSharedPreferences("dailyGoal", 0)
-        val dailyGoal = settings.getInt("dailyGoal", 0)
-        println("Daily goal is: ")
-        println(dailyGoal);
-        if(dailyGoal == 1){
-            seeDailyGoalButton.setOnClickListener {  val intent = Intent(this, AlreadyCompletedDailyGoal::class.java)
-                startActivity(intent) }
-        }
-        else{
-            seeDailyGoalButton.setOnClickListener {  val intent = Intent(this, DailyGoal::class.java)
-                startActivity(intent) }
-        }
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
